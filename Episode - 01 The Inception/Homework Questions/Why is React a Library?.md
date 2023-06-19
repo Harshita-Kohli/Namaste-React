@@ -1,7 +1,10 @@
 # React is a Library
 Because, we as a developer can decide where to use it in our code. It can even work in just the header or just the footer of the app.
 
+
 # Difference betweeen Library and Framework 
+[Helpful articel] https://www.freecodecamp.org/news/the-difference-between-a-framework-and-a-library-bd133054023f/
+
 Frameworks and libraries are both code written by someone else that helps you perform some common tasks in a less verbose way.
 The technical difference between a framework and library lies in a term called **Inversion of control**.
 
