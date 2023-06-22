@@ -24,13 +24,24 @@
     - `type = ""` ie empty string / don't set the attribute only : In case of normal classic JS script
     - `type = "module" ` : In case of Module Script, This value causes the code to be treated as a JavaScript module.
   
-## Q4: `{TitleComponent()}` vs `<TitleComponent/>` vs `<TitleComponent></TitleComponent>` ? 
+## Q4: {TitleComponent()} vs `<TitleComponent/>` vs `<TitleComponent></TitleComponent>`?
   
-    All three are methods to render the TitleComponent functional component in some other component or React element.
-    - `{TitleComponent()}` : call the TitleComponent function since Fucntional components are at the end of the day JS functions
-    - `<TitleComponent/>` : Using self-closing tags
-    - `<TitleComponent></TitleComponent>` : Using opening and closing tags
-  
+  All three are methods to render the TitleComponent functional component in some other component or React element.
+  - `{TitleComponent()}` : call the TitleComponent function since Fucntional components are at the end of the day JS functions
+  - `<TitleComponent/>` : Using self-closing tags
+  - `<TitleComponent></TitleComponent>` : Using opening and closing tags
+    
+## Q5: Can we have multiple root elements in React using multiple createRoot()?
+  - Yes we can have. [Link]: https://react.dev/reference/react-dom/client/createRoot#usage
+  - In case our app is fully built using React, simply have a single root for the entire app.
+  - But in case our app/page is justy partially built with React, then we can have multiple createRoot(), and then use multiple root.render() methods to display different content in each root
+
+## Q6: Can we have nested fragments in React?
+  - Yes we can have nested fragments
+
+## Q7: What makes our web app code so readable in case of React? Is it just React itself?
+  - It is not just React, it is because of JSX that our code becomes much more readable! Otherwise, the conventional way of createReactElement() was very cumbersome!
+
 ### Important Resources: 
   - Read about XSS - https://www.stackhawk.com/blog/react-xss-guide-examples-and-prevention/
   - Read about React Fragments - https://legacy.reactjs.org/docs/fragments.html
