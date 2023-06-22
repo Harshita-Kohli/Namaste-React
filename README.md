@@ -31,3 +31,9 @@
     - `<TitleComponent/>` : Using self-closing tags
     - `<TitleComponent></TitleComponent>` : Using opening and closing tags
   
+### Important Resources: 
+  - Read about XSS - https://www.stackhawk.com/blog/react-xss-guide-examples-and-prevention/
+  - Read about React Fragments - https://legacy.reactjs.org/docs/fragments.html
+  - How JSX prevents injection attacks - https://legacy.reactjs.org/docs/introducing-jsx.html#jsx-prevents-injection-attacks
+
+  
