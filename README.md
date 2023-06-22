@@ -13,7 +13,8 @@
   - Behind the scenes, it gets TRANSPILED into React.createElement() by Babel and then it generates React Element
     - Thus JSX is actually another way of creating React elements rather than using the core React way to create elements. 
   - We can write any JS expression/logic in the JSX by using {}. So simply wrap the JS code in {} to execute it and render it dynamically.
-  - JSX protects against DOM XSS(Cross-Site Scripting) attacks by doing AUTO-ESCAPING and sanitizing the data coming in {}.
+  - JSX protects against **DOM XSS(Cross-Site Scripting)** attacks by doing AUTO-ESCAPING and sanitizing the data coming in {}.
+  - [More about XSS] - https://owasp.org/www-community/attacks/xss/
  
 ## Q3: Role of 'type' attribute in <script> tags? What options can I use there?
   - It is used to tell the browser what type of script is it. 
