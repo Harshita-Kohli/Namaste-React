@@ -1,38 +1,48 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//The React equivalent of the above HTML is this: 
-const parent = React.createElement("div", { id: "parent" }, //parent div
-    [React.createElement("div", { id: "child1" }, //child 1 div having h1 and h2
-        [React.createElement("h1", {}, "I am an h1 tag"), React.createElement("h2", {}, "I am an h2 tag")])
-        ,
-    React.createElement("div", { id: "child2" }, ///child 2 div having h1 and h2
-        [React.createElement("h1", {}, "I am an h1 tag"), React.createElement("h2", {}, "I am an h2 tag")])
-    ]
-);
+//React Element
+// const heading = React.createElement("h1", {}, "Namaste React!"); //a React element created using core react
+
+const jsxHeading = <h1 className="heading">Namaste React</h1>;// react element created using JSx syntax
+
+//----------------------------------------------
+//React Functional Component: a JS function returning some piece of JSX
+//Using Normal Arrow function syntax:
+const TitleComponent = () =>{
+    return <h1 className="heading">Namaste React Title!</h1>;
+}
+//We are doing Component Composition when we are using a component inside another component
+//Using Shorthand Arrow function notation:
+const HeadingComponent = () => ( 
+        <div>
+            <TitleComponent/>
+            <h1 className="heading2">Namaste React from Heading Component!</h1>
+        </div>
+    )
+//--------------------------------------------    
+//Trying to inject a malicious script in the JSX
+const title = `console.log("Danger!!")<script></script>`;
+
+const HeadingComponent2 = () => {
+    return <div>
+                {title} 
+                {/**All the following three are the ways to use a component inside another component*/}
+                {TitleComponent()}
+                <TitleComponent/>
+                <TitleComponent></TitleComponent>
+                
+                <h1 className="heading2">Namaste React from Heading Component!</h1>
+            </div>
+} 
+    
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
-console.log(parent);
+root.render(<HeadingComponent2/>);
+//there will be no difference between these 2 headings since both at the end 
+//of day are React elements:
+// console.log(heading);
+// console.log(jsxHeading);
 
 
-// const heading = React.createElement(
-//     "h1", 
-//     {id:"heading", xyz: "abc"},  //the 2nd argument is the attributes that we want to give to the h1 tag
-//     "Hello World from React!"
-//     ); //create an h1 element
-// const root = ReactDOM.createRoot(document.getElementById("root"));//we have created a root for our react library
-// root.render(heading);//to render our heading inside root
-// console.log(heading); //this logs a React element( a JS object )
 
-/**
- * <div id = "parent">
-    * <div id = "child1">
-    *   <h1>I am an h1 tag</h1>
-    *   <h2>I am an h2 tag</h2>
-    * </div>
-    * <div id = "child2">
-    *   <h1>I am an h1 tag</h1>
-    *   <h2>I am an h2 tag</h2>
-    * </div>
- * </div> 
- */
+
