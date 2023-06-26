@@ -1,4 +1,4 @@
-# h2(Planning of our Food Ordering App)
+## (Planning of our Food Ordering App)
  Low-Level Design: Components in the App
  - App
     - Header
@@ -16,16 +16,16 @@
       - Contact 
       - Other Links
 
-# h2(Intro of Episode - 05)
-//Two Types of Exports: 
-# h3 Default Export: 
+## (Intro of Episode - 05)
+### Two Types of Exports: 
+### Default Export: 
 - If you want to export something by default from a file
 - You can just have a **single** default export from one file
 - Syntax
       `export default Component;
        import Component from "path";`
 
-# h3 Named Export:
+### Named Export:
 - If you want to **export multiple things** from one file, we use Named Exports
 - Syntax:
       `export const Component;
