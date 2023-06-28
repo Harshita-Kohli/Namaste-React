@@ -1,3 +1,4 @@
+//When we 
 const resList = [
     {
       "type": "restaurant",

@@ -24,10 +24,21 @@
   padding: 15px;
   list-style-type: none;
 }
-.search {
+.login-btn{
+  cursor: pointer;
+  padding:10px;
+  margin: 10px;
+}
+/* .search {
   padding: 10px;
   margin: 2px;
   border: 2px solid black;
+} */
+
+.filter-btn{
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
 }
 .res-container {
   display: flex;
@@ -54,5 +65,20 @@
   padding: 1px;
   width: 200px;
   height: 130px;
+  border-radius: 10px;
+}
+.shimmer-container{
+  display: flex;
+  flex-wrap:wrap;
+  border: 2px solid black;
+}
+.shimmer-card{
+  color: white;
+  padding: 1px;
+  width: 210px;
+  height:400px;
+  background-color: #f0f0f0;
+  margin: 5px;
+  box-sizing: border-box;
   border-radius: 10px;
 }

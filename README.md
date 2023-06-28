@@ -1,32 +1,8 @@
-# h2(Planning of our Food Ordering App)
- Low-Level Design: Components in the App
- - App
-    - Header
-      - Logo
-      - Nav Items
-   - Body
-      - Search
-      - Card Container
-      - Restaurant Card
-         - Image
-         - Name of Restaurant, Cuisine, Star Rating, Delivery Time
-   - Footer
-      - Copyright
-      - Address
-      - Contact 
-      - Other Links
-
-# h2(Intro of Episode - 05)
-//Two Types of Exports: 
-# h3 Default Export: 
-- If you want to export something by default from a file
-- You can just have a **single** default export from one file
-- Syntax
-      `export default Component;
-       import Component from "path";`
-
-# h3 Named Export:
-- If you want to **export multiple things** from one file, we use Named Exports
-- Syntax:
-      `export const Component;
-        import {Component} from "path";`
+## React Hooks
+- Simple Normal JS Functions given as utility functions to us by React
+- Written by Facebook Developers inside the react we imported from npm
+- Have some logic in them that brings superpowers in our app
+- Mostly used hooks are: 
+   - useState() - used 80% of the times
+   - useEffect() - used 20% of the times
+- Other hooks are also used but have a little less usage as compared to the above 2
