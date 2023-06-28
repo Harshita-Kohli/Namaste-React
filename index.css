@@ -67,18 +67,3 @@
   height: 130px;
   border-radius: 10px;
 }
-.shimmer-container{
-  display: flex;
-  flex-wrap:wrap;
-  border: 2px solid black;
-}
-.shimmer-card{
-  color: white;
-  padding: 1px;
-  width: 210px;
-  height:400px;
-  background-color: #f0f0f0;
-  margin: 5px;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
