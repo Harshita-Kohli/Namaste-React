@@ -1,5 +1,5 @@
 ## React Hooks
-- Simple Normal JS Functions given as utility functions to us by React
+- **Simple Normal JS Functions given as utility functions to us by React**
 - Written by Facebook Developers inside the react we imported from npm
 - Have some logic in them that brings superpowers in our app
 - Mostly used hooks are: 
