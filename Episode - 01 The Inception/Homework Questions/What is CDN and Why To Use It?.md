@@ -21,3 +21,5 @@ By utilizing caching to reduce hosting bandwidth, helping to prevent interruptio
 At its core, a CDN is a network of servers linked together with the goal of delivering content as quickly, cheaply, reliably, and securely as possible. In order to improve speed and connectivity, a CDN will place servers at the exchange points between different networks.
 
 These Internet exchange points (IXPs) are the primary locations where different Internet providers connect in order to provide each other access to traffic originating on their different networks. By having a connection to these high speed and highly interconnected locations, a CDN provider is able to reduce costs and transit times in high speed data delivery.
+
+[Read More About CDN]https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/
