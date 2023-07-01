@@ -1,5 +1,6 @@
 # Q2 Why CORS?
-Cross-Origin Resource Sharing (CORS).
+Cross-Origin Resource Sharing (CORS).   
+[Very Good Resource on CORS](https://simplelocalize.io/blog/posts/what-is-cors/)
 
 - **A cross-origin request is a request for website resources external to the origin. For example, a.example.com attempts to serve resources from b.secondexample.com.**
 - CORS instructs the browser to determine if a cross-origin request, such as an image or JavaScript from b.secondexample.com, is allowed by a.example.com. The browser does not load resources that are disallowed by CORS.
