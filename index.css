@@ -35,10 +35,15 @@
   border: 2px solid black;
 } */
 
-.filter-btn{
-  cursor: pointer;
+.filter{
+  display: flex;
   padding: 10px;
   margin: 10px;
+}
+
+.filter-btn{
+  cursor: pointer;
+  margin: 0px 10px;
 }
 .res-container {
   display: flex;
