@@ -1,6 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from '../components/Shimmer';
+import { RES_LIST_URL } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   //listofRestaurants is a local state variable, local becoz has scope within the body component!
@@ -8,7 +10,7 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   const [searchText, setSearchText] = useState("");//state representing the search text of the input field
-  
+
   console.log("Body Rendered");
 
   //using useEffect to fetch the data only after initial render of the <Body/> 
@@ -19,7 +21,7 @@ const Body = () => {
 
   const fetchData = async () => {
     //await for the data to come from the swiggy API...but enable CORS in your browser
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.934626&lng=77.7054388&page_type=DESKTOP_WEB_LISTING")
+    const data = await fetch(RES_LIST_URL);
     //convert the stream of data to json
     const jsonData = await data.json();//await for the promise to be resolved
 
@@ -27,7 +29,7 @@ const Body = () => {
     setListOfRestaurants(jsonData?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestaurants(jsonData?.data?.cards[2]?.data?.data?.cards);
   }
-  
+
   //Conditional Rendering:
   //till the time the restaurants are not loaded, we will show the Shimmer UI cards:
   // if (listOfRestaurants.length === 0) {
@@ -49,13 +51,13 @@ const Body = () => {
             }
           />
           <button onClick={() => {
-                console.log(searchText)
-                //filter logic:
-                const filtered = listOfRestaurants.filter((res) => res.data.name.toLowerCase().includes(searchText.toLowerCase())
-                );
-                setFilteredRestaurants(filtered);
-              }
-            }>
+            console.log(searchText)
+            //filter logic:
+            const filtered = listOfRestaurants.filter((res) => res.data.name.toLowerCase().includes(searchText.toLowerCase())
+            );
+            setFilteredRestaurants(filtered);
+          }
+          }>
             Search
           </button>
         </div>
@@ -74,8 +76,9 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.data.id}
+          <Link to = {"/restaurants/"+restaurant.data.id} key={restaurant.data.id} className = "link"><RestaurantCard 
             resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
