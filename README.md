@@ -48,5 +48,5 @@
   - [OWASP Article on XSS](https://owasp.org/www-community/attacks/xss/)
   - [Read about React Fragments](https://legacy.reactjs.org/docs/fragments.html)
   - [How JSX prevents injection attacks](https://legacy.reactjs.org/docs/introducing-jsx.html#jsx-prevents-injection-attacks)
-
+  - [NPM Scripts](https://dev.to/paulasantamaria/mastering-npm-scripts-2chd)
   
