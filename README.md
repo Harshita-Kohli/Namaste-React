@@ -33,7 +33,7 @@
   - `<TitleComponent></TitleComponent>` : Using opening and closing tags
     
 ## Q5: Can we have multiple root elements in React using multiple createRoot()?
-  - Yes we can have. [Link]: https://react.dev/reference/react-dom/client/createRoot#usage
+  - Yes we can have. [Read More](https://react.dev/reference/react-dom/client/createRoot#usage)
   - In case our app is fully built using React, simply have a single root for the entire app.
   - But in case our app/page is justy partially built with React, then we can have multiple createRoot(), and then use multiple root.render() methods to display different content in each root
 
@@ -44,8 +44,9 @@
   - It is not just React, it is because of JSX that our code becomes much more readable! Otherwise, the conventional way of createReactElement() was very cumbersome!
 
 ### Important Resources: 
-  - Read about XSS - https://www.stackhawk.com/blog/react-xss-guide-examples-and-prevention/
-  - Read about React Fragments - https://legacy.reactjs.org/docs/fragments.html
-  - How JSX prevents injection attacks - https://legacy.reactjs.org/docs/introducing-jsx.html#jsx-prevents-injection-attacks
+  - [Read about XSS](https://www.stackhawk.com/blog/react-xss-guide-examples-and-prevention/)
+  - [OWASP Article on XSS](https://owasp.org/www-community/attacks/xss/)
+  - [Read about React Fragments](https://legacy.reactjs.org/docs/fragments.html)
+  - [How JSX prevents injection attacks](https://legacy.reactjs.org/docs/introducing-jsx.html#jsx-prevents-injection-attacks)
 
   
