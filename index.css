@@ -54,7 +54,7 @@
 }
 .res-card {
   color: white;
-  padding: 1px;
+  padding: 2px;
   width: 210px;
   background: #242b2e;
   /* height:300px; */
@@ -100,7 +100,7 @@
   justify-content: space-between;
   border: 2px solid black;
   margin: 2px;
-  color:white;
+  color: white;
   background: #242b2e;
   /* flex-wrap:wrap; */
 }
@@ -111,10 +111,10 @@ li {
   list-style-type: none;
 }
 
-.menu-container{
+.menu-container {
   display: flex;
   flex-wrap: wrap;
-  background: #f0f0f0
+  background: #f0f0f0;
   /* border: 2px solid black; */
 }
 .menu-item {
@@ -134,7 +134,7 @@ li {
   box-shadow: 9px 6px 11px 0px grey;
 }
 /*============== Toggle Switch CSS==========================*/
-.switch-container{
+.switch-container {
   display: flex;
   align-items: center;
 }
@@ -195,4 +195,19 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+/* ============CSS for User Card====================== */
+.user-card {
+  border: 1px solid black;
+  background-color: #242b2e;
+  color: white;
+  width: 300px;
+  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.user-card:hover {
+  cursor: pointer;
+  box-shadow: 9px 6px 11px 0px grey;
 }
