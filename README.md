@@ -11,17 +11,20 @@
    - It is a toolkit that makes writing HTML, CSS code really easy!
      
 2. Difference between Library and Framework?
-   ### Library:
+   ##### Library:
    - Library is one that can be applied to any part of our existing app.
    - It does not INVERT THE CONTROL since the control is in the hands of the programmer who can use it where and when required
    - React is a library since it can be applied to any portion of our app like navbar or header etc.
 
-    ### Framework:
+    ##### Framework:
    - Framework is a whole full-fledged program that is used to build a whole app.
    - It INVERTS THE CONTROL since it provides the developer some places to plug in their code. It calls that code only as needed.
    - React is not a framework but a library.
 
-3. What is CDN and WHy Do we use it?
-4. 
+3. What is CDN and Why Do we use it?
+4. Why is React called React?
+   - Because it is "Reacts" to any state or property changes, and works with data of any form (as deeply structured as the graph itself) so the name is fitting.
+5. What is the cross-origin in script tag?
+   - It is an attribute that we add to the script tag to tell the browser that no credentials are needed for accessing this script. So we allow cross-origin sharing with this attribute.
    
     
