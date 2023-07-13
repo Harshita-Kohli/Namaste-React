@@ -1,5 +1,6 @@
 # HomeWork Questions
 ## Q1: What is JSX?
+  - JSX took its name from js-xml-literal, which Jordan modified to just be syntactic sugar for deeply nested function calls.[Read More](https://legacy.reactjs.org/blog/2016/09/28/our-first-50000-stars.html#adding-jsx)
   - Is a Syntax Extension to JS.
   - Stands for JavaScript Syntax Extension( not JavaScript XML!!).
   - React developers came up with this syntax as the React.createElement() was very complicated in case of generating nested DOM structure.
