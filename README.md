@@ -24,7 +24,14 @@
 3. What is CDN and Why Do we use it?
 4. Why is React called React?
    - Because it is "Reacts" to any state or property changes, and works with data of any form (as deeply structured as the graph itself) so the name is fitting.
-5. What is the cross-origin in script tag?
+5. What is the cross-origin in script tag? [Read More](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin)
    - It is an attribute that we add to the script tag to tell the browser that no credentials are needed for accessing this script. So we allow cross-origin sharing with this attribute.
    
-    
+#### 6. What is the difference between React and ReactDOM?
+   - React is the library that provides the core React code. This is the fundamental code needed to run React anywhere
+   - ReactDOM is that React library for performing DOM operations. It is specific to the browser. It is bridge between React and Browsers. Enables runnning React in browser.
+   - We know React does not just run in Browsers, but also on Mobile, Android, etc. So we have different libraries for executing React on different platforms.
+   - So we need 2 separate packages in our app.
+
+#### 7. What is the difference between react.development.js and react.production.js files via CDN ?
+   - The React library provides two versions of its JavaScript files: **react.development.js** and **react.production.js**. These files serve different purposes and are typically used in different stages of the development and deployment process.
