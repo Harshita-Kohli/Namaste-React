@@ -9,9 +9,9 @@
 
 ## Homework Questions:
 #### 1. Why can't we have  async callback function in useEffect()? 
-[Read More on Medium](https://medium.com/@achieversittraininga/using-async-await-inside-reacts-useeffect-hook-bedc401be860#:~:text=Because%20the%20useEffect%20hook%20in,invoked%2C%20resulting%20in%20a%20problem.)
+  - [Read More on Medium](https://medium.com/@achieversittraininga/using-async-await-inside-reacts-useeffect-hook-bedc401be860#:~:text=Because%20the%20useEffect%20hook%20in,invoked%2C%20resulting%20in%20a%20problem.)
 
-[Read More on HashNode](https://shubhambhoj.hashnode.dev/useeffect-async)
+  - [Read More on HashNode](https://shubhambhoj.hashnode.dev/useeffect-async)
   - Because an async function implicitly returns a promise. But the useEffect() hook expects its callback function to either return nothing or return a cleanup function.
   - So React's useEffect hook expects its callback function to return a cleanup function which gets executed just before the component unmounts. So if we make tha callback function as async, it causes a bug as cleanup function will never be called.
   - useEffect must not return anything besides a function, which is used for clean-up.
@@ -27,3 +27,5 @@ useEffect(() => {
   fetchData();
 }, [someId]);  // Or [] if effect doesn't need props or state
 ```
+#### 2. Why can we use async with componentDidMount?  [Read More](https://www.valentinog.com/blog/await-react/)
+  - Since componentDidMount() is the best place to make fetch calls, we can make it async.
