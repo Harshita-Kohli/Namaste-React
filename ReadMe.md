@@ -24,7 +24,7 @@
   - Dev Dependencies: They are the ones which our project requires just in the development phase. Such dependencies are put into the "devDependencies" key of the package.json.
   - In our React project, we install parcel as a devDependency since npm knows parcel is required at development phase to bundle the code, not at production, because bundling should be done before production.
 
-#### 6. What is Tree Shaking?
+#### 6. What is Tree Shaking? [Read More on MDN](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)
   - In production builds, Parcel tries to analyze all the imports and exports of each module. It sees which module is not reachable and no more required. Then it removes everything that is unused. This is Tree Shaking or Dead-code Elimination.
   - Tree Shaking is done for both static imports(ie. import <module> from "path") and dynamic imports(ie. import()).
 
