@@ -1,3 +1,5 @@
+# Important Resources
+  - [Tree Shaking MDN Docs](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)
 # Homework Questions
 #### 1. What is npm?
   - npm is a package manager that manages all the packages. It can be thought of as a **huge registry or repository of packages.**
