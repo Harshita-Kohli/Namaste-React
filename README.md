@@ -39,4 +39,4 @@
 ### Q4. Why do we need a useState() hook? 
    - useState() hook gives us a powerful state variable
    - State variable means a variable which maintains the state of the component
-   - SUPERPOWER: If it gets changed/updated, it leads to the re-render of the entire component
+   - SUPERPOWER: If the state gets changed/updated, it triggers the Reconciliation and leads to the re-render of the entire component
