@@ -14,7 +14,7 @@ class UserProfileClass extends React.Component {
     async componentDidMount() {
         //WE MAKE API CALL HERE
         // console.log(this.props.name + "Child ComponentDidMount Called!!")
-        const data = await fetch("https://api.github.com/users/Harshita-Kohli");
+        const data = await fetch("https://api.github.com/users/" + this.props.name);
         const json = await data.json();
         // console.log(json);
         this.setState({ //we pass in this object to the setState() to update  
@@ -26,17 +26,17 @@ class UserProfileClass extends React.Component {
         // console.log(this.props.name + "Child Render Called");
         const { name, location, twitter_username, avatar_url } = this.state.userInfo;
 
-        return <div className="user-card">
+        return <div className="user-card m-2 p-2 rounded-md border hover:shadow-lg">
             <img src={avatar_url} alt="avatar_img" width="200px" />
-            <h1>Name: {name}</h1>
+            <h1 className="font-bold">Name: {name}</h1>
             <h2>Location: {location}</h2>
             <h3>Contact: @{twitter_username} </h3>
         </div>
     }
-    componentDidUpdate(){
+    componentDidUpdate() {
         // console.log(this.props.name+ " Child ComponentDidUpdate Called");
     }
-    componentWillUnmount(){
+    componentWillUnmount() {
         // console.log(this.props.name+" Child ComponentWillUnmount Called");
     }
 }

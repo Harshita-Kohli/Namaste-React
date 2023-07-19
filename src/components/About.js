@@ -12,10 +12,15 @@ class About extends Component {
     }
     render() {
         // console.log("Parent Render Called");
-        return <div>
-            <h1>This is Namaste React Web Series</h1>
-            <UserProfileClass name = {"First"}/>
-            <UserClass name = {"First"}/>
+        return <div className='p-4 m-4'>
+            <h1>Meet our Namaste React Team</h1>
+            <div className='p-2 flex flex-wrap items-center justify-center'>
+                <UserProfileClass name={"Harshita-Kohli"} />
+                <UserProfileClass name={"Surbhi-Kohli"} />
+                <UserProfileClass name={"akshaymarch7"} />
+                <UserProfileClass name={"akshaymarch7"} />
+                <UserProfileClass name={"akshaymarch7"} />
+            </div>
             {/*<UserClass name={"First"} location={"Amritsar"} />
             <UserClass name={"Second"} location={"Bangalore"} />
     <UserClass name={"Third"} location={"Gurugram"} />*/}
@@ -23,6 +28,8 @@ class About extends Component {
     }
 }
 export default About;
+
+//----------------------------
 // const About = () => {
 //     return <div>
 //         <h1>This is Namaste React Web Series</h1>
