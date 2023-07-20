@@ -9,8 +9,8 @@
 #### 1. What is a Microservice?
 - A Microservice is an **independently existing service in Microservice architecture.**
 - Each microservice is **independently deployable. and has its own business logic.**
-- Each microservice has its **own single responsibitlity** and **exists independently** in Microservice Architecture.
-- Updating, testing, deploying everything occcurs within each microservice.
+- Each microservice has its **own single responsibility** and **exists independently** in Microservice Architecture.
+- Updating, testing, deploying everything occurs within each microservice.
 
 #### 2. What is Monolithic Architecture?
 - It is the traditional architecture where all the **various functionality like UI, Backend, DB, APIs, SMS, Email Notifications is written in the same single big project.**
