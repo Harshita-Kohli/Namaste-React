@@ -20,21 +20,14 @@
 - All the **business logics are coupled together in the same project.**
 
 #### 3. Monolith vs Microservice?
-1.     [Single Responsibility]
-       Monolith: there is one large code base where all the services are coupled together, so no SRP concept.
-       Microservice architecture: the code base is split among multiple services, each service having its own single responsibility
-2.     [DEPLOYEMENT]
-       Monolith: Need to re-Deploy the entire bulky code even on small change in the app. 
-       Microservice: Each small microservice is independently deployable, so faster and more frequent release cycles.
-4.     [Difficulty in Changing]
-       Monolith: A single small change in the app requires the entire big project to be built and compiled again.
-       Microservice: Since each microservice is independent, we need not not rebuild the entire project.
-6.     [Flexibility]
-       Monolith: The technology/tech stack has to be same throughout the whole project. Also use the same tech as used already in monolith
-       Microservice: Each team can choose the techstack for each micorservice, so no restrictions.
-7.     [Development speed]
-       Monolith: A large monolithic app makes development more complex and slow.
-       Microservice: Each service is independently developed, so easy and quick development.
+| Point                      | Monolith                                                                                               | Microservice Architecture                                                                          |
+|----------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Single Responsibility** | There is one large code base where all the services are coupled together, so no SRP concept.             | The code base is split among multiple services, each service having its own single responsibility. |
+| **Deployment**            | Need to re-deploy the entire bulky code even on small changes in the app.                               | Each small microservice is independently deployable, so faster and more frequent release cycles.  |
+| **Difficulty in Changing**| A single small change in the app requires the entire big project to be built and compiled again.        | Since each microservice is independent, we need not rebuild the entire project.                    |
+| **Flexibility**           | The technology/tech stack has to be the same throughout the whole project. Also use the same tech as used already in monolith. | Each team can choose the tech stack for each microservice, so no restrictions.               |
+| **Development Speed**     | A large monolithic app makes development more complex and slow.                                          | Each service is independently developed, so easy and quick development.                            |
+
 
 #### 4. Why do we need a useEffect Hook?
 - useEffect() hook is another **utility function provided by React out-of-the-box**.
