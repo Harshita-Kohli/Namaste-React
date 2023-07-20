@@ -52,7 +52,7 @@
   Here JS implicitly checks that `obj.first` is not null or undefined before attempting to access obj.first.second.
   If `obj.first` is null or undefined, then the entire expression is short-circuited and evaluated to undefined, thus `a = undefined`
 
-#### 6. What is Shimmer UI?
+#### 6. What is Shimmer UI? [Read More](https://medium.com/lattice-what-is/shimmer-ui-a-better-way-to-show-loading-states-aa1f4e563d17)
 - Shimmer UI is a concept where we show **Dummy shimmery UI while loading the app**.
 - This is not the actual UI but a **dummy UI having Cards and other elements as placeholders untill the actual UI loads**.
 - This gives a better UX since it is like providing **some cues to the user as to what is going to load on the screen**.
