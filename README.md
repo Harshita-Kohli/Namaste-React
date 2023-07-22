@@ -39,4 +39,22 @@
 ### Q4. Why do we need a useState() hook? 
    - useState() hook gives us a powerful state variable
    - State variable means a variable which maintains the state of the component
-   - SUPERPOWER: If the state gets changed/updated, it triggers the Reconciliation and leads to the re-render of the entire component
+   - SUPERPOWER: If the state gets changed/updated, it triggers the Reconciliation and leads to the re-render of the entire component.
+
+#### Q5. Why can't I directly mutate the data imported in my js file from another js file?
+   - This is because the imported data is immutable. It is read-only! So we can read it, but can't mutate it.
+   - If we want to perform some mutation on it in our js file, we must create a local variable and assign that imported data to this variable.
+   - Now we can perform any mutation on that variable's data (provided it is 'let' and not 'const').
+   - The best way, however will be to create State variable and then update it with the imported data.
+
+     eg:
+   - When we import something into our file, it is immutable. We can't directly mutate the original resList data from the Body.js component. 
+   - To do the filtering, we need to make a local variable eg: 'list' and assign it the resList data.
+   - Now we can run filter on the resList array of objects and store the filtered data into the 'list' array. Console.log(list) to see the filtered array.
+   - So to conclude, imported data is immutable. We need to declare a local variable that uses that data. Now that local variable is mutable.
+      - ![image](https://github.com/Harshita-Kohli/Namaste-React/assets/54809528/b10cc2a6-94f4-455e-b2c1-4793123c6467)
+      - ![image](https://github.com/Harshita-Kohli/Namaste-React/assets/54809528/5685073b-dc09-4a90-ae97-b62ff1d98cb6)
+   - Directly Mutating:
+      - ![image](https://github.com/Harshita-Kohli/Namaste-React/assets/54809528/9f6dd4ff-bed9-44ac-9585-280e6c7be8bb)
+      - ![image](https://github.com/Harshita-Kohli/Namaste-React/assets/54809528/956794e9-08a9-4da1-8cca-1e1187b71e15)
+
