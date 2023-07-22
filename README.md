@@ -41,7 +41,7 @@
    - State variable means a variable which maintains the state of the component
    - SUPERPOWER: If the state gets changed/updated, it triggers the Reconciliation and leads to the re-render of the entire component.
 
-#### Q5. Why can't I directly mutate the data imported in my js file from another js file?
+#### Q5. Why can't I directly mutate the data imported in my js file from another js file? [Read More](https://stackoverflow.com/questions/65845168/mutating-an-array-present-in-one-js-file-from-another-js-file-in-react-native)
    - This is because the imported data is immutable. It is read-only! So we can read it, but can't mutate it.
    - If we want to perform some mutation on it in our js file, we must create a local variable and assign that imported data to this variable.
    - Now we can perform any mutation on that variable's data (provided it is 'let' and not 'const').
