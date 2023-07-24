@@ -1,9 +1,10 @@
-import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from '../components/Shimmer';
 import { RES_LIST_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   //listofRestaurants is a local state variable, local becoz has scope within the body component!
@@ -11,8 +12,12 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   const [searchText, setSearchText] = useState("");//state representing the search text of the input field
+  const { loggedInUser, setUserName } = useContext(UserContext);//using context
 
-  console.log("Body Rendered");
+  //calling the higher-order component that returns RestaurantCard with promoted label:
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
+  // console.log("Body Rendered");
 
   //using useEffect to fetch the data only after initial render of the <Body/> 
   useEffect(() => {
@@ -41,7 +46,7 @@ const Body = () => {
   // }
 
   const onlineStatus = useOnlineStatus();//using custom hook to get online status of the user out-of-the-box
-  console.log(onlineStatus);
+  // console.log(onlineStatus);
   if (onlineStatus === false) {
     return (
       <h1>Looks like you are offline!! Please check your internet connection!!</h1>
@@ -52,6 +57,13 @@ const Body = () => {
   ) : (
     <div className="body bg-slate-50">
       <div className="filter flex justify-end items-center">
+        <div>
+          <label>Username</label>
+          <input className="border border-black p-2 m-2 rounded-lg" value = {loggedInUser} 
+          onChange = {(e)=>{
+            setUserName(e.target.value);
+          }}></input>
+        </div>
         <div className="search m-3 px-2">
           <input
             type="text"
@@ -99,12 +111,16 @@ const Body = () => {
           </button>
         </div>
       </div>
+      <div className="m-4 p-4 font-bold text-xl">
+        Welcome {loggedInUser},
+      </div>
       <div className="res-container flex flex-wrap justify-center">
         {filteredRestaurants.map((restaurant) => (
           <Link to={"/restaurants/" + restaurant.data.id}
             key={restaurant.data.id}
-            className="link"><RestaurantCard
-              resData={restaurant} />
+            className="link">
+            {/*if promoted is true, then return promoted restaurant card, else simple restaurant card*/}
+            {restaurant.data.promoted ? <RestaurantCardPromoted resData={restaurant} /> : <RestaurantCard resData={restaurant} />}
           </Link>
         ))}
       </div>
@@ -112,3 +128,4 @@ const Body = () => {
   )
 }
 export default Body;
+

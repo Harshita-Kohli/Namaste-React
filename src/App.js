@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -8,25 +8,31 @@ import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { Shimmer } from "react-shimmer";
-// import Grocery from "./components/Grocery";
 import useOnlineStatus from "./utils/useOnlineStatus";
+import UserContext from "./utils/UserContext";
 
 const Grocery = lazy(() => import("/src/components/Grocery")); //lazy loading of Grocery
 
 const AppLayout = () => {
+
   const onlineStatus = useOnlineStatus();
-  // if(onlineStatus === false){
-  //   return (
-  //     <div className="app">
-  //       <h1> Seems like you are offline</h1>
-  //     </div>
-  //   )
-  // }
+  const [userName, setUserName] = useState();
+
+  // console.log(useState());
+  useEffect(() => {
+    //Make an API call with username and password, and we got hte authenticated user data:
+    const data = {
+      name: "Harshita Kohli"
+    }
+    setUserName(data.name);
+  }, []);
   return (
-    <div className="app">
-      <Header />
-      <Outlet /> {/**This outlet will be replaced by the actual component that should be rendered based upon the route */}
-    </div>
+    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+      <div className="app">
+        <Header />
+        <Outlet /> {/**This outlet will be replaced by the actual component that should be rendered based upon the route */}
+      </div>
+    </UserContext.Provider>
   )
 }
 

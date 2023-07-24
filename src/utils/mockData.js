@@ -1,5 +1,5 @@
 //When we 
-const resList = [
+let resList = [
     {
       "type": "restaurant",
       "data": {
