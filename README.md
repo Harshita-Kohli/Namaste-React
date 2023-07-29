@@ -29,3 +29,15 @@ useEffect(() => {
 ```
 #### 2. Why can we use async with componentDidMount?  [Read More](https://www.valentinog.com/blog/await-react/)
   - Since componentDidMount() is the best place to make fetch calls, we can make it async.
+
+#### 3. How do you create nested routes using react-router-dom configuration?
+
+#### 4. Read about createHashRouter and createMemeoryRouter from react-router-dom.
+
+#### 5. What is the order of lifecycle method calls in Class-Based Components?
+
+#### 6. Why do we use componentDidMount?
+
+#### 7. Why do we use componentWillUnMount? Show with example.
+
+#### 8. Why do we use super(props) in constructor?
