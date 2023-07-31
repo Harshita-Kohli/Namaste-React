@@ -145,6 +145,7 @@ componentDidUpdate(prevState, prevProps){
   - This is a **common OOP principle that whenever we call the child constructor, the first thing to do in the child constructor is to initialise the parent class members.**
   - Reason being **child class derives the parent class and it must be using the parent class members**. **It would be wrong to use  those parent class members in child class without even initialising them. This would cause an error.**
   - Similarly **in case of React class components, we know we will be using {this.props}. The 'this' object is actually coming from the parent class 'Component'. So we can't use {this.props} unless the 'this.props' has been initialised in the parent class.**
+  - **super(props) initialises the 'this.props'** so that it can be used in the child i.e. the React class component.
   
   - So, Recommended way: - **React recommends calling super() with props as the first thing to make sure that this.props has been initialised!!**
 ```
