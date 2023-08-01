@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState, useEffect } from "react";
+import React, { lazy, Suspense, useState, useEffect, useContext } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -10,6 +10,9 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import { Shimmer } from "react-shimmer";
 import useOnlineStatus from "./utils/useOnlineStatus";
 import UserContext from "./utils/UserContext";
+import {Provider} from 'react-redux';
+import appStore from "./redux/appStore";
+import Cart from "./components/Cart";
 
 const Grocery = lazy(() => import("/src/components/Grocery")); //lazy loading of Grocery
 
@@ -17,22 +20,26 @@ const AppLayout = () => {
 
   const onlineStatus = useOnlineStatus();
   const [userName, setUserName] = useState();
+  // const { themeColor } = useContext(ThemeContext);
 
   // console.log(useState());
   useEffect(() => {
-    //Make an API call with username and password, and we got hte authenticated user data:
+    //Make an API call with username and password, and we got the authenticated user data:
     const data = {
       name: "Harshita Kohli"
     }
     setUserName(data.name);
   }, []);
   return (
-    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
-      <div className="app">
-        <Header />
-        <Outlet /> {/**This outlet will be replaced by the actual component that should be rendered based upon the route */}
-      </div>
-    </UserContext.Provider>
+    //we provide our store to the root level of the app
+    <Provider store={appStore}> 
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          <Header />
+          <Outlet /> {/**This outlet will be replaced by the actual component that should be rendered based upon the route */}
+        </div>
+      </UserContext.Provider>
+    </Provider>
   )
 }
 
@@ -60,6 +67,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:resId",
         element: <RestaurantMenu />
+      },
+      {
+        path: "/cart",
+        element: <Cart/>
       }
     ],
     errorElement: <Error />

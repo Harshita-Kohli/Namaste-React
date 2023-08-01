@@ -5,6 +5,7 @@ import { RES_LIST_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+// import ThemeContext from "../utils/ThemeContext";
 
 const Body = () => {
   //listofRestaurants is a local state variable, local becoz has scope within the body component!
@@ -13,7 +14,7 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");//state representing the search text of the input field
   const { loggedInUser, setUserName } = useContext(UserContext);//using context
-
+  // const {themeColor} = useContext(ThemeContext);
   //calling the higher-order component that returns RestaurantCard with promoted label:
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
@@ -33,17 +34,12 @@ const Body = () => {
     const data = await fetch(RES_LIST_URL);
     //convert the stream of data to json
     const jsonData = await data.json();//await for the promise to be resolved
-
+console.log(jsonData);
     //optional chaining in JS '?.'
-    setListOfRestaurants(jsonData?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurants(jsonData?.data?.cards[2]?.data?.data?.cards);
+    // console.log(jsonData?.data?.cards[2]?.data?.data?.cards);
+    setListOfRestaurants(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilteredRestaurants(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
-
-  //Conditional Rendering:
-  //till the time the restaurants are not loaded, we will show the Shimmer UI cards:
-  // if (listOfRestaurants.length === 0) {
-  //   return <Shimmer />;
-  // }
 
   const onlineStatus = useOnlineStatus();//using custom hook to get online status of the user out-of-the-box
   // console.log(onlineStatus);
@@ -99,7 +95,7 @@ const Body = () => {
           <button className="filter-btn mr-4 p-2 bg-slate-300 rounded-md hover:shadow-md"
             onClick={() => {  //this is a callback function that runs when we click the button
               //Filter logic:
-              const filteredRestaurants = listOfRestaurants.filter(res => res.data.avgRating > 4)
+              const filteredRestaurants = listOfRestaurants.filter(res => res.info.avgRating > 4)
               //update the state:
               setFilteredRestaurants(filteredRestaurants);//thsi updates the state variable and leads to re-rendering of the component!
               console.log(listOfRestaurants);
@@ -116,11 +112,11 @@ const Body = () => {
       </div>
       <div className="res-container flex flex-wrap justify-center">
         {filteredRestaurants.map((restaurant) => (
-          <Link to={"/restaurants/" + restaurant.data.id}
-            key={restaurant.data.id}
+          <Link to={"/restaurants/" + restaurant.info.id}
+            key={restaurant.info.id}
             className="link">
             {/*if promoted is true, then return promoted restaurant card, else simple restaurant card*/}
-            {restaurant.data.promoted ? <RestaurantCardPromoted resData={restaurant} /> : <RestaurantCard resData={restaurant} />}
+            {restaurant.info.promoted ? <RestaurantCardPromoted resData={restaurant} /> : <RestaurantCard resData={restaurant} />}
           </Link>
         ))}
       </div>
