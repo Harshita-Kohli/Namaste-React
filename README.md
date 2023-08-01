@@ -8,6 +8,7 @@
    - **useState()** - used 80% of the times
    - **useEffect()** - used 20% of the times
 - Other hooks are also used but have a little less usage as compared to the above 2
+- [State Updates may be Asynchronous and are batched](https://legacy.reactjs.org/docs/state-and-lifecycle.html#state-updates-may-be-asynchronous)
 -----------------------------------------------------------------------------------
 ## HomeWork Questions
 
