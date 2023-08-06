@@ -76,10 +76,10 @@ const Grocery = lazy(()=>{import("/src/components/Grocery")});
   - If we **encounter any bug in a particular functionality of our Modular code**, we have **a localised bug** i.e. we can easily figure our that the **bug arises from which module**. Now we can simply **test that component/module and resolve the bug**. Otherwise, we would have to **find the bug in that one single big module of the app, which would be very difficult. Thus Modularity makes our code more Testable!**
       
 #### 7. What are Custom Hooks? How to identify their need?
-- We know React Hooks are utility functions provided by React developers. They are simply JS functions exported by the React library, which we can reuse any number of times in our app.
-- Similarly, we can write our own Custom Hooks in our code.
+- We know **React Hooks are utility functions provided by React developers**. They are **simply JS functions exported by the React library**, which we can reuse any number of times in our app.
+- Similarly, we can **write our own Custom Hooks in our code.**
 - **TO IDENTIFY THEIR NEED:**
-  - To create a Custom Hook is not mandatory, but a good practice!
+  - To create a Custom Hook is not **mandatory, but a good practice**!
   - Whenever we find that **a single component is dealing with more than 1 responsibility, we must think of bringing SRP into it by abstracting some "utility functionality" outside it.**
   - Suppose one component `<Body/>` is responsible for **fetching data from an API** as well as **rendering that data using JSX**. We must think of keeping only 1 aim for this component.
   - So we can create a **custom hook that actually fetches data from an API endpoint and returns that data**.
@@ -88,11 +88,11 @@ const Grocery = lazy(()=>{import("/src/components/Grocery")});
 - Thus Custom Hooks act as **Utility functions that abstract out the extra responsibility from the component.** And **they can now be re-used anywhere in our app, any number of times.**
   
 #### 8. How to write a custom hook?
-- Since Custom Hook is a utility function, we should think of placing it into the 'utils' folder.
-- We should maintain separate file for separate hook and name the file excatly same as the hook's name.
-- Custom Hook's name should always begin with 'use', for example, 'useFetch'. This is a good convention and tells React that it is not a simple JS function but a hook.
-- Always begin with writing the contract of the custom hook i.e. what it takes as input and what it returns as output.
-- This is the Contract for useRestaurantMenu hook. It takes resId as input and returns corresponding resInfo as 
+- Since **Custom Hook is a utility function**, we should think of placing it into the **'utils' folder**.
+- We should **maintain separate file for separate hook and name the file exactly same as the hook's name.**
+- **Custom Hook's name should always begin with 'use'**, for example, 'useFetch'. This is a good convention and tells React that it is not a simple JS function but a hook.
+- Always begin with writing the **Contract of the custom hook** i.e. what it takes as **input and what it returns as output**.
+- This is the Contract for useRestaurantMenu hook. **It takes resId as input and returns corresponding resInfo as output.**
 - Eg: resId(I/P) ------> | useRestaurantMenu(Hook) | -----------------> resInfo(O/P)
 - Once the contract is clear, we can write the actual logic inside the Custom hook.
 ```
@@ -107,8 +107,8 @@ export default useRestaurantMenu;
 ```
 
 #### 10. What is meant by 'Linting'? [Read about ESLint from npm](https://www.npmjs.com/package/eslint-plugin-react)
-- Linting is a process of running your code through a tool to analyse for potential errors. It throws an error if you don't follow the conventions set by the linter.
-- ESLint is a popular JS linter that checks the JS code for best practices, with rules checking :
+- **Linting is a process of running your code** through a **tool to analyse for potential errors. It throws an error if you don't follow the conventions set by the linter.**
+- **ESLint is a popular JS linter** that checks the **JS code for best practices, with rules checking** :
     - Keys in Iterators
     - Complete set of prop types
     - Naming Conventions
