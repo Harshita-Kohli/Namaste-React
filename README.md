@@ -51,7 +51,7 @@ const Grocery = lazy(()=>{import("/src/components/Grocery")});
   2. **Prevents Bloating of the App:** Bloating means increasing the Bundke Size of the app. Since we break the app into smaller chunks/bundles, we don't have any large, bulky bundles of our app that can make it slow and bloated.
   3. **Single Responsibility Principle:** Code Splitting brings SRP since every bundle/chunk is concerned wiht one major responsiblity/feeature. Eg: 'Flights.js' Bundle is a small app within the MMT app that is holds all the code related to the Flights.
      'Homestays.js' - this bundle has all the code related to Homestays etc. This way each bundle is a logical separation of features.
-  4. **Helpfull in making Scalable and Performant App**
+  4. **Helpful in making Scalable and Performant App**
      
 ##### Disadvantages of Lazy Loading and Code Splitting:
   1. **Time Consumed in Network Calls:** So since we load the lazy loaded components only when they are actually required, we need to make Network calls to fetch that component later. Lazy loaded routes need to perform network requests to fetch JS chunks and this takes time!
