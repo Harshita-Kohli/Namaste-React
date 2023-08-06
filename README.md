@@ -73,7 +73,7 @@ const Grocery = lazy(()=>{import("/src/components/Grocery")});
   - Eg: The `<Shimmer/>` component is one single module in our app. We can reuse it anywhere we want to create loading effect in the UI.
   - **Thus Modularity makes our code Reusable!**
 ##### How more testable?
-  - If we **encounter any bug in a particular functionality of our Modular code**, we have **a localised bug** i.e. we can easily figure our that the **bug arises from which module**. Now we can simply **test that component/module and resolve the bug**. Otherwise, we would have to **find the bug in that one single big module of the app, which would be very difficult. Thus Modularity makes our code more Testable!**
+  - If we **encounter any bug in a particular functionality of our Modular code**, we have **a localised bug** i.e. we can easily figure out that the **bug arises from which module**. Now we can simply **test that component/module and resolve the bug**. Otherwise, we would have to **find the bug in that one single big module of the app, which would be very difficult. Thus Modularity makes our code more Testable!**
       
 #### 7. What are Custom Hooks? How to identify their need?
 - We know **React Hooks are utility functions provided by React developers**. They are **simply JS functions exported by the React library**, which we can reuse any number of times in our app.
