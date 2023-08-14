@@ -31,3 +31,5 @@
      - They export such components that are already beautiful. We can simply import and use them.
      - Tailwind CSS is the most modern method being used extensively in the industry to style web apps. 
 
+#### 2. How do you configure tailwind?
+
