@@ -78,6 +78,7 @@
 #### 5. What are the pros and cons of using tailwind css?
 
   **PROS**
+  
     1. We have all our styles in the js files itself. No need to move to and fro between js and css files again and again. So the development becomes quite quick.
     2. It is very **lightweight**. Only the classes that we use are included in the bundle of css. **Minimum CSS is loaded. Unused CSS is never shipped.**
     3. We can **build any complex UI** with Tailwind.
@@ -86,5 +87,6 @@
     6. **Preventing Redundancy**: When using Tailwind CSS, if we have two exact same green buttons, we can use the same classes for both of them. Behind the scenes, the CSS code for that class will be imported just once by Tailwind. **So our code will have just one such class not different redundant classes as in Vanilla CSS.**
     
  **CONS**
+ 
     1. When we add a lot of CSS classes to our html/js code, the code becomes less-readable,lengthy and clumsy.
     2. Tailwind comes with a lot of **initial learning curve**.
