@@ -32,4 +32,50 @@
      - Tailwind CSS is the most modern method being used extensively in the industry to style web apps. 
 
 #### 2. How do you configure tailwind?
+  - **Step1:** Create the project
+  - **Step2: Install tailwind css via npm** an initialise it to generate teh tailwind.config.js file
+      ```
+           > npm install -D tailwindcss postcss
+           > npx tailwindcss init
+      ```
+  - **Step3: Create a .postcssrc file** at the root level of our app. This creates the config file for postcss. This **tells parcel to use postcss to read and understand tailwindcss.**
+  - **Step4: Give the configuration in postcssrc file.**
+      #### .postcssrc:
+      ```
+      {
+      "plugins": {
+        "tailwindcss":{}
+        }
+      }
+      ```
+  - **Step5: Give configuration for tailind css**. So need **to fill the content attribute in tailwind.config.js**
+      ```
+      module.exports = {
+        content: ["./src/**/*.{html,js}",]
+        theme: {
+                extend:{},
+               },
+        plugins: [],
+      }
+      ```
+  - **Step6: Add Tailwind directives in index.css file:**
+      ```
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+      ```
+#### 3. In tailwind.config.js, what do all the keys "content","theme","extend,"plugins" mean?
+  - **"content"**: It is the section of the config file where **we configure the paths to HTML, JS components and any other source files that contain tailwind classnames.** We specify the regex that tells where all tailwind can be used in our project.
+  - **"theme"**: It is the section where you define your **project’s color palette, type scale, fonts, breakpoints, border radius values, and more.**
+  - **"extend"**: It allows to extend the default spacing scale. If you’d like to preserve the default values for a theme option but also add new values, add your **extensions under the extend key in the theme section of your configuration file.**
+  - **"plugins"**: Plugins let you register new styles by injecting them into the user’s stylesheet using JavaScript instead of CSS.
 
+#### 4. Why do we have a .postcssrc file?
+  - .postcssrc file is a configuration file for postcss.
+  - This we need to create at the root level of our project.
+  - It tells parcel that it should make use of postcss to read and understand tailwind css.
+
+#### 5. What are the pros and cons of using tailwind css?
+  **PROS**
+    1. We have all our styles in the js files itself. No need to move to and fro between js and css files again and again.
+    2. It is very lightweight. 
