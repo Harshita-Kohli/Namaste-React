@@ -83,3 +83,6 @@
     4. We can build **absolutely responsive UIs** without writing media queries.
     5. Easily apply **hover and focus** states by using `hover:` at the beginning of the classname.
     6. **Preventing Redundancy**: When using Tailwind CSS, if we have two exact same green buttons, we can use the same classes for both of them. Behind the scenes, the CSS code for that class will be imported just once by Tailwind. **So our code will have just one such class not different redundant classes as in Vanilla CSS.**
+ **CONS**
+    1. When we add a lot of CSS classes to our html/js code, the code becomes less-readable,lengthy and clumsy.
+    2. Tailwind comes with a lot of **initial learning curve**.
