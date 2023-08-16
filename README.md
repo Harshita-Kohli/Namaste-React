@@ -9,4 +9,11 @@
 
 ## HomeWork Questions
 
-#### 1. 
+#### Q1. What is a Higher-Order Component?
+  - It is a function that takes an existing component as an argument and then enhances that component(adds some extra features to it), and then returns this enhanced component.
+  - Higher Order Components are **Pure Functions**. They never modify the component that they take in as input. They just add extra features on top of it.
+
+#### Q2. What are Controlled and Uncontrolled Components?
+#### Q2. What makes the Data Layer of our app?
+#### Q2. What makes the UI Layer of our app?
+#### Q2. What are Controlled and Uncontrolled Components?
