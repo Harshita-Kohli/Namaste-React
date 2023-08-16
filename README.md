@@ -16,4 +16,4 @@
 #### Q2. What are Controlled and Uncontrolled Components?
 #### Q2. What makes the Data Layer of our app?
 #### Q2. What makes the UI Layer of our app?
-#### Q2. What are Controlled and Uncontrolled Components?
+#### Q2. What Lifting the State Up?
