@@ -38,8 +38,38 @@
   - This problem is called '**Props Drilling**'.
 
 #### Q7. What are Context Provider and Context Consumer?
-  - Context Provider:
+  - **Context Provider:**
       - When we use the React Context concept, we **first create Context as a central/ global place giving some default value to it.**
       - Then we need to **Provide** it to our app, but not with the default value. We want to specify some value in the context.
       - So we need to use a component called **<SomeContext.Provider/>** to provide the value for the context. And we wrap some part of our app/whole app with this component.
-      - To this component, we can pass the **'value'** prop. In the value prop, we can pass in the data we want to keep in the context. 
+      - To this component, we can pass the **'value'** prop. In the value prop, we can pass in the data we want to keep in the context. This data will override the default value.
+  - **Context Consumer:**
+      - We use this component **<SomeContext.Consumer/>** to subscribe to a context. It lets us read the context value.
+      - It is a component that subscribes to the context changes.
+      - In this component, we wrap a function. That function takes the current context value and returns a React node.
+
+#### Q8. If you don't pass a value to the provider, does it take the default value?
+  - If we don't pass any value to the provider, it does not take the default value.
+  - Instead, it simply assigns undefined to the context value and when later we try to use the context value inside some consumer or useContext(), we get a typeError saying the value is undefined.
+  - If we totally avoid the Provider component, then the components where useContext() is written will take the default context value
+```
+const ThemeContext = createContext("Default");
+```
+```
+const User = ()=>{
+  const context = useContext(ThemeContext);
+  return <h2>User: {context}</h2>
+}
+```
+```
+const App = ()=>{
+  return (<div>
+          <ThemeContext.Provider value = {{context:"User1"}}>
+            <User/>  //Child inside Provider will get "User1" 
+          <ThemeContext.Provider/>
+          //Totally avoiding the Provider component:
+          <User/>   //Child outside Provider will get "Default"
+        </div>
+  )
+}
+```
