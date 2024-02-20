@@ -59,3 +59,7 @@
       - ![image](https://github.com/Harshita-Kohli/Namaste-React/assets/54809528/9f6dd4ff-bed9-44ac-9585-280e6c7be8bb)
       - ![image](https://github.com/Harshita-Kohli/Namaste-React/assets/54809528/956794e9-08a9-4da1-8cca-1e1187b71e15)
 
+#### Q6. Difference between React useEffect hook and event handlers? [Read More](https://react.dev/learn/separating-events-from-effects)
+   - Event handlers only re-run when you perform the **same interaction** again. Unlike event handlers, Effects **re-synchronize if some value they read, like a prop or a state variable, is different from what it was during the last render.**
+   - Event handlers run in response to some interactions only.
+   - With useEffect(), we don't need to be dependent upon the interation by the user to do something. useEffect() makes sure that the component remains synchronised with the current situation always.
