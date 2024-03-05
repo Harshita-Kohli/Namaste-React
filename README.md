@@ -6,8 +6,19 @@
 - [Lifting the State Up](https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-example)
 - [What is the Problem with Props Drilling?](https://react.dev/learn/passing-data-deeply-with-context#the-problem-with-passing-props)
 - [What are the various ways to avoid Props Drilling?](https://blog.logrocket.com/solving-prop-drilling-react-apps/)
+  
 
 ## HomeWork Questions
+
+#### Q0. How to create an array from an object? 
+  - When working with objects, you can use the **Object.entries()** function to create a new array from an object.
+  - It returns an array of the given object's own enumerable string-keyed property key-value pairs.
+  - Each key-value pair is an array with two elements: the first element is the property key (which is always a string), and the second element is the property value.
+  - Example:
+```
+const obj = { foo: "bar", baz: 42 };
+console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
+```
 
 #### Q1. What is a Higher-Order Component?
   - It is a **function that takes an existing component as an argument and then enhances that component(adds some extra features to it), and then returns this enhanced component.**
