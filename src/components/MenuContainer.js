@@ -3,10 +3,10 @@ import { useState } from "react";
 import MenuCategory from "./MenuCategory";
 const MenuContainer = (props) => {
     const { filteredMenu, categories } = props;
-    
+
     //this state variable keeps track of whoch index needs to be expanded.
     //If visibleIndex = 0, it means the first category is to be expanded
-    const [visibleIndex, setVisibleIndex] = useState(null);
+    const [visibleIndex, setVisibleIndex] = useState(0);
     // console.log(categories);
     return (
         <div className="text-center">
@@ -20,9 +20,9 @@ const MenuContainer = (props) => {
                         setVisibleIndex(index);
                     }
                     }
-                    setVisibleIndexNull = {()=>{setVisibleIndex(null);}}
+                    setVisibleIndexNull={() => { setVisibleIndex(null); }}
                     visibleIndex={visibleIndex}
-                    currentIndex = {index}
+                    currentIndex={index}
                 />)}
         </div>
     )

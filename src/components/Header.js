@@ -5,7 +5,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 
-export const Header = () => {
+const Header = () => {
 
   const [btnName, setBtnName] = useState("Login");
   const [theme, setTheme] = useState("dark");
@@ -23,7 +23,7 @@ export const Header = () => {
   //----------
   //Subscribing the store using Selector
   const cartItems = useSelector((store) => store.cart.items);//we tell the useSelector() hook what exactly we want to subscribe
-  console.log(cartItems);
+  // console.log(cartItems);
   // -------
   return (
     <div className="flex justify-between text-stone-50 font-bold shadow-lg z-10 sticky top-0 relative bg-red-600 md:bg-red-700 dark:bg-slate-900">

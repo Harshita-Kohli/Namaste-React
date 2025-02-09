@@ -1,0 +1,112 @@
+{
+  "info": {
+    "id": "580936",
+    "name": "EatFit",
+    "cloudinaryImageId": "94d3bc5e6392fbaf50686cf8cfab10ef",
+    "locality": "Devarabisanahalli",
+    "areaName": "Bellandur",
+    "costForTwo": "₹270 for two",
+    "cuisines": [
+      "Chinese",
+      "Healthy Food",
+      "Tandoor",
+      "Pizzas",
+      "North Indian",
+      "Thalis",
+      "Biryani"
+    ],
+    "avgRating": 4.1,
+    "feeDetails": {
+      "restaurantId": "580936",
+      "fees": [
+        {
+          "name": "BASE_DISTANCE",
+          "fee": 2500
+        },
+        {
+          "name": "BASE_TIME"
+        },
+        {
+          "name": "ANCILLARY_SURGE_FEE"
+        }
+      ],
+      "totalFee": 2500
+    },
+    "parentId": "76139",
+    "avgRatingString": "4.1",
+    "totalRatingsString": "1K+",
+    "sla": {
+      "deliveryTime": 18,
+      "lastMileTravel": 1.6,
+      "serviceability": "SERVICEABLE",
+      "slaString": "18 mins",
+      "lastMileTravelString": "1.6 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2023-08-10 01:00:00",
+      "opened": true
+    },
+    "badges": {
+      "textExtendedBadges": [
+        {
+          "iconId": "guiltfree/GF_Logo_android_3x",
+          "shortDescription": "brand",
+          "fontColor": "#7E808C"
+        }
+      ]
+    },
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+      "entityBadges": {
+        "imageBased": {},
+        "textBased": {},
+        "textExtendedBadges": {
+          "badgeObject": [
+            {
+              "attributes": {
+                "description": "",
+                "fontColor": "#7E808C",
+                "iconId": "guiltfree/GF_Logo_android_3x",
+                "shortDescription": "brand"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "aggregatedDiscountInfoV3": {
+      "header": "40% OFF",
+      "subHeader": "UPTO ₹80",
+      "discountCalloutInfo": {
+        "message": "Free Delivery",
+        "logoCtx": {
+          "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+        }
+      }
+    },
+    "orderabilityCommunication": {
+      "title": {},
+      "subTitle": {},
+      "message": {},
+      "customIcon": {}
+    },
+    "differentiatedUi": {
+      "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      "differentiatedUiMediaDetails": {
+        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+        "lottie": {},
+        "video": {}
+      }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {}
+  },
+  "analytics": {},
+  "cta": {
+    "link": "https://www.swiggy.com/restaurants/eatfit-devarabisanahalli-bellandur-bangalore-580936",
+    "type": "WEBLINK"
+  }
+}
