@@ -1,3 +1,8 @@
+## HealthyKhana
+- Built a **mini food ordering application** with a **config-driven UI**, integrating the live **Swiggy APIs**.    
+- Integrated **Parcel for bundling**, **Redux for state management** and **Tailwind CSS** for styles.   
+
+
 ## Resources:
     - [Jest](https://jestjs.io/)
     - [Read about Testing Environments like jsDOM and node](https://legacy.reactjs.org/docs/testing-environments.html#mocking-a-rendering-surface)
